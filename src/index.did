@@ -1,0 +1,10 @@
+service: () -> {
+    createPost: (text, text, text) -> (variant {Ok:text; Err:text});
+    deletePostById: (text) -> (variant {Ok:text; Err:text});
+    getPosts: () -> (variant {Ok:vec record {id:text; title:text; content:text; userId:text; createdAt:nat64}; Err:text}) query;
+    getPostsById: (text) -> (variant {Ok:record {id:text; title:text; content:text; userId:text; createdAt:nat64}; Err:text}) query;
+    getPostsByUserId: (text) -> (variant {Ok:vec record {id:text; title:text; content:text; userId:text; createdAt:nat64}; Err:text}) query;
+    login: (text, text) -> (variant {Ok:text; Err:text});
+    logout: (text) -> (variant {Ok:text; Err:text});
+    register: (text, text) -> (variant {Ok:text; Err:text});
+}

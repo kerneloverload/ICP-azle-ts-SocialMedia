@@ -1,0 +1,14 @@
+{
+    "canisters": {
+      "socail_media": {
+        "type": "custom",
+        "main": "src/index.ts",
+        "candid": "src/index.did",
+        "build": "npx azle socail_media",
+        "ts": "src/index.ts",
+        "wasm": ".azle/socail_media/socail_media.wasm",
+        "gzip": true
+      }
+    }
+  }
+  
