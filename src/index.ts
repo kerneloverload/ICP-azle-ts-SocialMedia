@@ -113,7 +113,7 @@ export default Canister({
     // Function to retrieve posts by UserID
     getPostsByUserId: query([text], Result(Vec(Post), text), (userId) => {
         const posts = postsStorage.values().filter(p => p.userId === userId);
-        if("None" in posts){
+        if(posts.length === 0){
             return Err("Posts not found");
         }
         return Ok(posts);
